@@ -1,0 +1,23 @@
+.btn{
+    width: 30px;
+    border: 0px;
+    background-color: transparent;
+    color: red;
+    padding: 10px;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoDiv{
+    display: flex;
+    gap: 10px;
+}
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
