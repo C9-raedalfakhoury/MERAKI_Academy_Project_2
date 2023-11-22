@@ -28,7 +28,8 @@ body {
   padding: 10px;
   background-color: var(--button);
   align-items: center;
-  
+  position:sticky;
+  top: 0px;
 }
 .rightSide {
   display: flex;
@@ -42,7 +43,6 @@ body {
   align-items: center;
   gap: 0px;
   justify-content: flex-start;
-   
 }
 #Login {
   font-size: 20px;
@@ -53,6 +53,9 @@ body {
   cursor: pointer;
   font-family: inherit;
 }
+#Login:hover {
+  color: red;
+}
 #Register {
   font-size: 20px;
   border: 0px;
@@ -62,6 +65,9 @@ body {
   cursor: pointer;
   font-family: inherit;
 }
+#Register:hover {
+  color: red;
+}
 #btnBin {
   border: 0px;
 
@@ -70,10 +76,7 @@ body {
   padding: 5px;
   width: 50px;
 }
-#cardImg {
-  width: 18px;
-  height: 18px;
-}
+
 /* !!section logo search */
 #section {
   display: flex;
@@ -86,7 +89,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 #logo {
   width: 50%;
@@ -122,33 +125,73 @@ body {
   font-family: inherit;
   cursor: pointer;
 }
-.master {
-  background-color: black;
-  width: 100%;
-  height: 100px;
-}
+
 /* !! link section */
-.link{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid;
+  position: sticky;
+  top: 58px;
+  background-color: var(--button);
+}
+#category {
+  border: 0px;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  font-family: inherit;
+  color: var(--blue);
+  font-size: 18px;
+  cursor: pointer;
+}
+#category:hover {
+  color: red;
+}
+.line {
+  border: 1px solid var(--blue);
+  height: 27px;
+  align-self: center;
+}
+/* !! RENDER section */
+.master {
     width: 100%;
-    height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center
+}
+#card {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
     border: 1px solid;
+    width: 90%;
+    height: 90%;
 }
-#category{
-    border: 0px;
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
+p{
+  font-family: inherit;
+    padding-bottom: 2px;
+}
+.price{
+    font-size: 25px;
+    padding-bottom: 2px;
     font-family: inherit;
-    color: var(--blue);
-    font-size: 18PX;
-    cursor: pointer;
 }
-.line{
-    
-    border: 1px solid var(--blue);
-    height:27px;
-    align-self: center;
+#image{
+    width: 100%;
+    height: 89%;
 }
+#iconPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+}
+ 
