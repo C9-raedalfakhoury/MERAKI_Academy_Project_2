@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     title: "about product",
-    imageSrc: "./images/phone2.jpeg",
+    imageSrc: "./images/phone1.jpeg",
     description:
       " a wireless handheld device that allows users to make and receive calls.",
     rate: 10,
@@ -20,7 +20,7 @@ const products = [
   {
     id: 2,
     title: "about product",
-    imageSrc: "./images/phone3.webp",
+    imageSrc: "./images/phone1.jpeg",
     description:
       " a wireless handheld device that allows users to make and receive calls.",
     rate: 10,
@@ -29,7 +29,7 @@ const products = [
   {
     id: 2,
     title: "about product",
-    imageSrc: "./images/phone4.jpeg",
+    imageSrc: "./images/phone1.jpeg",
     description:
       " a wireless handheld device that allows users to make and receive calls.",
     rate: 10,
@@ -38,7 +38,7 @@ const products = [
   {
     id: 2,
     title: "about product",
-    imageSrc: "./images/phone5.jpeg",
+    imageSrc: "./images/phone1.jpeg",
     description:
       " a wireless handheld device that allows users to make and receive calls.",
     rate: 10,
@@ -47,7 +47,7 @@ const products = [
   {
     id: 2,
     title: "about product",
-    imageSrc: "./images/phone6.jpeg",
+    imageSrc: "./images/phone1.jpeg",
     description:
       " a wireless handheld device that allows users to make and receive calls.",
     rate: 10,
@@ -71,10 +71,28 @@ function toggle() {
     });
   }
 }
-
+function open() {
+  $(".popup").css({
+    visibility: "visible",
+    transform: "translate(-50%,-50%) scale(1)",
+    top: "50%",
+  });
+  $(".master").css({
+    opacity: "0.4",
+  });
+}
+function close() {
+  $(".popup").css("visibility", "hidden");
+  $(".master").css({
+    opacity: "1",
+  });
+}
+function x() {
+  console.log("dd");
+}
 const render = () => {
   products.forEach((elem, index) => {
-    const item = $(`<div id="card">
+    const item = $(`<div id=${index} class="card">
     <img id="image"src=${elem.imageSrc}>
     <div >
     <p>${elem.title}</p>
@@ -100,9 +118,13 @@ const render = () => {
     </div>
     
     </div>
-    
+    <button id=${index} class="addToCard">Add To Cart</button>
     </div>`);
     $(".master").append(item);
   });
+  $(".card").on("click", x);
+  $(".addToCard").on("click", open);
+  $(".OK").on("click", close);
 };
+
 $(window).on("load", render);
