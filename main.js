@@ -82,10 +82,12 @@ function close() {
 function x() {
   console.log($(this)[0]);
 }
+let counter = 0;
+const basketScreen = [];
 const render = () => {
   products.forEach((elem, index) => {
-    const item = $(` <div class="cardbutton">
-    <div id="${index+1}" class="card"  title="click for more details">
+    const item = $(` <div id="${index + 1}"  class="cardbutton">
+    <div id="${index + 1}" class="card"  title="click for more details">
       <img id="image" src="${elem.imageSrc}" />
       <div>
         <p>${elem.title}</p>
@@ -156,21 +158,21 @@ const render = () => {
         </div>
       </div>
     </div>
-    <div class="addToCard"><button id="${
+    <div id=${
       index + 1
-    }" class="addToCard">Add To Cart</button></div>
+    } class="addToCard"><button id=${
+      index + 1
+    } class="addToCart">Add To Cart</button></div>
   </div>`);
     $(".master").append(item);
   });
   $(".card").on("click", function open() {
-    
-
     console.log($(this)[0]);
     console.log($(this)[0].id);
 
-    $("h2").text(products[$(this)[0].id-1].title);
-    $('.imgPop')[0].src=products[$(this)[0].id-1].imageSrc
-    $(".detail").text(products[$(this)[0].id-1].description);
+    $("h2").text(products[$(this)[0].id - 1].title);
+    $(".imgPop")[0].src = products[$(this)[0].id - 1].imageSrc;
+    $(".detail").text(products[$(this)[0].id - 1].description);
     $(".popup").css({
       visibility: "visible",
       transform: "translate(-50%,-50%) scale(1)",
@@ -181,7 +183,17 @@ const render = () => {
       "pointer-events": "none",
     });
   });
-  // $(".addToCard").on("click",);
+  $(".addToCard").on("click", function () {
+    counter++;
+    myBasket[0].value = "My Basket " + `(${counter}) `;
+    console.log( $(this));
+    console.log(products.find((element) => element.id === 1));
+  });
+  const myBasket = $(
+    `<input type="button" id="Basket" value="My Basket (${counter})">`
+  );
+
+  $(".baskesBin").append(myBasket);
   $(".OK").on("click", close);
 };
 
