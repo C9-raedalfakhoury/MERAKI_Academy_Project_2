@@ -1,3 +1,12 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    font-family: cursive;
+}
 .btn{
     width: 30px;
     border: 0px;
@@ -10,10 +19,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: blue;
 }
 .logoDiv{
     display: flex;
     gap: 10px;
+    
 }
 .iconDiv{
     display: flex;
@@ -23,10 +34,26 @@
 }
 .allCardContainer{
     background-color: aqua;
+    
     display: grid;
     grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black ;
+    /* margin: 5px; */
+    height: 100vb;
+    width: 100%;
 }
+ 
+.card {
+    
+ }
+
 .img{
     width: 100px;
     height: 100px;
+    vertical-align: middle;
+    background-color: transparent;
+    margin: 10px;
+     
 }

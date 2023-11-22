@@ -75,17 +75,13 @@ const masterDiv = $(`<div class="masterDiv">
 </div>`);
 
 const body = $("body");
-
+const allCardContainer = $(`<div class="allCardContainer"></div>`);
 const render = () => {
   products.forEach((elem, index) => {
-    const allCardContainer = $(`<div class="allCardContainer">
-   <div class="Card">
-   <img src=${elem.imageSrc} class="img">
-   </div>
-   </div>`);
-   body.append(allCardContainer)
+    const cardImage = $(`<div class="Card"><img src=${elem.imageSrc} class="img"><div class="forPrice"><p class="price">${elem.price}</p></div></div>`);
+    allCardContainer.append(cardImage);
   });
 };
-body.on('load',render);
-body.append(masterDiv);
+$(window).on("load", render); //q2
 
+body.append(masterDiv,allCardContainer);
