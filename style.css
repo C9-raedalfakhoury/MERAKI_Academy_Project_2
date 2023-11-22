@@ -23,6 +23,22 @@ body {
 #header {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  background-color: var(--button);
+  align-items: center;
+}
+.rightSide{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    padding-right: 30px;
+}
+.shopping{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    justify-content: flex-start;
 }
 #Login {
   font-size: 20px;
@@ -30,6 +46,7 @@ body {
   background-color: transparent;
   color: var(--blue);
   padding: 5px;
+  cursor: pointer;
 }
 #Register {
   font-size: 20px;
@@ -37,11 +54,17 @@ body {
   background-color: transparent;
   color: var(--blue);
   padding: 5px;
+  cursor: pointer;
 }
 #btnBin {
   border: 0px;
- 
+
   background-color: transparent;
   color: var(--blue);
   padding: 5px;
+  width: 50px;
+}
+#cardImg{
+    width: 18px;
+    height: 18px;
 }
