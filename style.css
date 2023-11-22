@@ -21,3 +21,12 @@
     align-items: center;
     gap: 10px;
 }
+.allCardContainer{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.img{
+    width: 100px;
+    height: 100px;
+}
