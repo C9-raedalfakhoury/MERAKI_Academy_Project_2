@@ -71,12 +71,14 @@ function toggle() {
     });
   }
 }
-// btnMode.on("click", toggle);
+ 
 const render = () => {
-  products.forEach((elem, index) => {});
+  products.forEach((elem, index) => {
+    const card = $(`<div id="card">
+    <img id="image"src=${elem.imageSrc}>
+    </div>`);
+     
+  });
 };
 $(window).on("load", render); //q2
-
-// body.append(masterDiv,allCardContainer);
-// const cardImage = $(`<div class="Card"><img src=${elem.imageSrc} class="img"><div class="forPrice"><p class="price">${elem.price}</p></div></div>`);
-// allCardContainer.append(cardImage);
+ 
