@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>E-shopping</title>
-</head>
-<body>
-   <header id="header" ></header>
-    <script src="./main.js" ></script>
-</body>
+  </head>
+  <body>
+    <header id="header">
+      <div class="leftSide">
+        <input type="button" id="mode" onclick="toggle()" value="DarkMode" />
+      </div>
+      <div class="rightSide" >
+        <input type="button" id="Login" value="Login" >
+        <input type="button" id="Register" value="Register" >
+        <button id="btnBin" ><img src="./images/cart4.svg" alt=""></button>
+      </div>
+    </header>
+    <script src="./main.js"></script>
+  </body>
 </html>

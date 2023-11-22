@@ -1,59 +1,47 @@
-*{
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+:root {
+  --blue: #190482;
+  --white: #ffffff;
+  --button: #c2d9ff;
+}
 
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
-body{
-    font-family: cursive;
+body {
+  font-family: cursive;
 }
-.btn{
-    width: 30px;
-    border: 0px;
-    background-color: transparent;
-    color: red;
-    padding: 10px;
-    
+#mode {
+  font-size: 20px;
+  border: 1px solid var(--blue);
+  background-color: var(--button);
+  color: var(--blue);
+  padding: 5px;
+  border-radius: 15px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: blue;
+#header {
+  display: flex;
+  justify-content: space-between;
 }
-.logoDiv{
-    display: flex;
-    gap: 10px;
-    
+#Login {
+  font-size: 20px;
+  border: 0px;
+  background-color: transparent;
+  color: var(--blue);
+  padding: 5px;
 }
-.iconDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+#Register {
+  font-size: 20px;
+  border: 0px;
+  background-color: transparent;
+  color: var(--blue);
+  padding: 5px;
 }
-.allCardContainer{
-    background-color: aqua;
-    
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid black ;
-    /* margin: 5px; */
-    height: 100vb;
-    width: 100%;
-}
+#btnBin {
+  border: 0px;
  
-.card {
-    
- }
-
-.img{
-    width: 100px;
-    height: 100px;
-    vertical-align: middle;
-    background-color: transparent;
-    margin: 10px;
-     
+  background-color: transparent;
+  color: var(--blue);
+  padding: 5px;
 }
