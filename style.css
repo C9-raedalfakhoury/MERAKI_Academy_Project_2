@@ -21,6 +21,7 @@ body {
   border-radius: 15px;
   font-family: inherit;
   cursor: pointer;
+  width: 100px;
 }
 #header {
   display: flex;
@@ -28,7 +29,7 @@ body {
   padding: 10px;
   background-color: var(--button);
   align-items: center;
-  position:sticky;
+  position: sticky;
   top: 0px;
 }
 .rightSide {
@@ -53,6 +54,24 @@ body {
   cursor: pointer;
   font-family: inherit;
 }
+#Basket {
+  font-size: 20px;
+  border: 0px;
+  background-color: transparent;
+  color: var(--blue);
+
+  cursor: pointer;
+  font-family: inherit;
+}
+#Basket:hover{
+  color: red;
+}
+.baskesBin {
+  display: flex;
+  gap: 0px;
+  justify-content: flex-end;
+  align-items: center;
+}
 #Login:hover {
   color: red;
 }
@@ -73,7 +92,7 @@ body {
 
   background-color: transparent;
   color: var(--blue);
-  padding: 5px;
+
   width: 50px;
 }
 
@@ -158,113 +177,116 @@ body {
 }
 /* !! RENDER section */
 .master {
-    width: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   align-items: center;
   column-gap: 20px;
   row-gap: 20px;
-  justify-items: center
+  justify-items: center;
 }
 .card {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 5px;
-    border: 1px solid;
-    width: 90%;
-    height: 100%;
-    cursor: pointer;
-   
+  display: flex;
+  flex-direction: column;
+  padding: 0px 2px;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
-p{
+p {
   font-family: inherit;
-    padding-bottom: 2px;
+  padding-bottom: 2px;
 }
-.price{
-    font-size: 25px;
-    padding-bottom: 2px;
-    font-family: inherit;
+.price {
+  font-size: 25px;
+  padding-bottom: 2px;
+  font-family: inherit;
 }
-#image{
-    width: 100%;
-    height: 89%;
+#image {
+  width: 100%;
+  height: 89%;
 }
-#iconPrice{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px;
+#iconPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
 }
- .addToCard{
-    background-color: var(--button);
-    color: var(--blue);
-    font-size: 14px;
-    font-family: inherit;
-    cursor: pointer;
+.addToCard {
+  background-color: var(--button);
+  color: var(--blue);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.cardbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* !! popup */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #27005d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit {
+  background-color: aliceblue;
+  width: 100px;
+  height: 30px;
+  border: 0px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.popup {
+  /* z-index: 1000; */
+  width: 60%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #0e21a0;
+
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.1);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 10px;
+  transition: transform 2s, top 2s;
+}
+ .imgtop{
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  background-color:#0e21a0;
+  border-radius: 50%;
+  padding: 5px;
  }
- /* !! popup */
- * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: #27005D;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     
-}
-.submit{
-    background-color: aliceblue;
-    width: 100px;
-    height: 30px;
-    border: 0px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.popup{
-    /* z-index: 1000; */
-    width:50%;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #0E21A0;
-   
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    visibility: hidden;
-    transform: translate(-50%,-50%) scale(0.1);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    padding: 10px;
-    transition: transform 2s , top 2s;
-}
- 
-
-.popup img{
-    width: 100px;
-    height: 100px;
-border-radius: 50%;
-margin-top: -50px;
-
-}
 .popup button {
-    width: 20%;
-    padding: 5px;
-    border: 0px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-
+  width: 20%;
+  padding: 5px;
+  border: 0px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
 }
