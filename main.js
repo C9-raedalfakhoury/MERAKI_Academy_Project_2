@@ -5,7 +5,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "1 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐",
     price: 25,
   },
   {
@@ -14,7 +14,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐⭐⭐",
     price: 25,
   },
   {
@@ -23,7 +23,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "3 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐",
     price: 23,
   },
   {
@@ -32,7 +32,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "4 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐⭐⭐",
     price: 25,
   },
   {
@@ -41,7 +41,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "5 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐⭐",
     price: 25,
   },
   {
@@ -50,7 +50,7 @@ const products = [
     imageSrc: "./images/phone1.jpeg",
     description:
       "6 a wireless handheld device that allows users to make and receive calls.",
-    rate: 10,
+    rate: "⭐⭐⭐",
     price: 25,
   },
 ];
@@ -83,7 +83,8 @@ function x() {
   console.log($(this)[0]);
 }
 let counter = 0;
-const basketScreen = [];
+
+const myListProduct = [];
 const render = () => {
   products.forEach((elem, index) => {
     const item = $(` <div id="${index + 1}"  class="cardbutton">
@@ -95,80 +96,21 @@ const render = () => {
       <div id="iconPrice">
         <p class="price">$${elem.price}</p>
         <div class="starIcon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="rgb(210, 235, 24)"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="rgb(210, 235, 24)"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="rgb(210, 235, 24)"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="rgb(210, 235, 24)"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="rgb(210, 235, 24)"
-            class="bi bi-star-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-            />
-          </svg>
+        <h2>${elem.rate}</h2>
+        
         </div>
       </div>
     </div>
-    <div id=${
+    <div id=${index + 1} class="addToCard"><button id=${
       index + 1
-    } class="addToCard"><button id=${
-      index + 1
-    } class="addToCart">Add To Cart</button></div>
+    } class="addToCart" >Add To Cart</button></div>
   </div>`);
     $(".master").append(item);
   });
   $(".card").on("click", function open() {
     console.log($(this)[0]);
     console.log($(this)[0].id);
+    const xx = products.filter((x) => x.id == $(this)[0].id);
 
     $("h2").text(products[$(this)[0].id - 1].title);
     $(".imgPop")[0].src = products[$(this)[0].id - 1].imageSrc;
@@ -183,18 +125,42 @@ const render = () => {
       "pointer-events": "none",
     });
   });
+
   $(".addToCard").on("click", function () {
     counter++;
     myBasket[0].value = "My Basket " + `(${counter}) `;
-    console.log( $(this));
-    console.log(products.find((element) => element.id === 1));
+
+    const xx = products.filter((x) => x.id == $(this)[0].id);
+    myListProduct.push(xx);
+    console.log(myListProduct);
   });
   const myBasket = $(
-    `<input type="button" id="Basket" value="My Basket (${counter})">`
+    `<input type="button" id="Basket" onclick="dele()" value="My Basket (${counter})">`
   );
 
   $(".baskesBin").append(myBasket);
   $(".OK").on("click", close);
 };
+function dele() {
+  $("#section").css({
+    display: "none",
+  });
+  $(".myCart").css({
+    display: "flex",
+  });
+  myListProduct.forEach((elem, index) => {
+  const final = $(`<div class="myProduct">
+         
+  <div><img src=${elem.imageSrc}  /></div>
+  <div class="pft">
+    <p>${elem.price}</p>
+    <p>fff</p>
+    <p>total</p>
+  </div>
+ 
+</div>`);
+  $(".myCart").append(final);
+});
+}
 
 $(window).on("load", render);

@@ -108,9 +108,8 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  /* border: 1px solid; */
-  position: fixed;
-  top: 0px;
+  
+  
 }
 #logo {
   width: 50%;
@@ -303,3 +302,46 @@ p {
   font-size: 14px;
   font-weight: 600;
 }
+ /* !! my basket */
+ .myCart{
+  display: flex;
+  flex-direction: column;
+
+ }
+ .headerBasket{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin: 5px 20px;
+ padding-bottom: 5px;
+ border-bottom: 2px solid goldenrod;
+ }
+ .data{
+display: flex;
+align-items: center;
+justify-content: space-around;
+width: 30%;
+gap: 20px;
+ }
+ .myProduct{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin: 5px 20px;
+ padding-bottom: 5px;
+ border-bottom: 2px solid #888888;
+ }
+ .finalCart{
+  display: flex;
+align-items: center;
+justify-content: space-around;
+width: 30%;
+gap: 20px;
+ }
+ .pft{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  gap: 20px;
+ }
