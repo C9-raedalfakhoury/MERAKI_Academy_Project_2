@@ -288,9 +288,45 @@ function basketScreen() {
   </div>
  
 </div>`);
-$(".bt").on('click',function() {
-   this.remove()
-})
+ 
+$(".bt").on("click", function () {
+  const indexToRemove = $(this).closest(".myProduct").attr("id") - 1;
+
+  // Remove the product from the array in memory
+  myListProduct.splice(indexToRemove, 1);
+  totalPrice.splice(indexToRemove, 1);
+
+  // Save the updated array back to local storage
+  localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
+  localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
+
+  // Remove the corresponding HTML element
+  $(this).closest(".myProduct").remove();
+
+  // Recalculate total price
+  const finalPrice = JSON.parse(localStorage.getItem("myListProduct"))?.map(
+    (ele) => ele.price * ele.Quantity
+  );
+
+  const sumWithInitial = finalPrice?.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+
+  // Update the total price display
+  $(".totalPrice").text("Total Price" + " " + sumWithInitial);
+
+  // Update the total quantity in the basket
+  const finalQuantity = JSON.parse(localStorage.getItem("myListProduct"))?.map(
+    (ele) => ele.Quantity
+  );
+  const totalQuantity = finalQuantity?.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  localStorage.setItem("totalQuantity", totalQuantity);
+  $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
+});
     $(".myCart").append(final);
   });
   for (let index = 0; index < totalPrice.length; index++) {
