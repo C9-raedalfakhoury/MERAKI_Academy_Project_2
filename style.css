@@ -353,3 +353,26 @@ gap: 20px;
   left: 50%;
   border-top: goldenrod;
  }
+ .imgDeleteIcon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .fa-solid{
+  width: 100px;
+  height: 100px;
+  display: inline;
+  font-size: 25px;
+  color:red;
+ }
+ .btnDelete{
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+ }
+ .arrowBack{
+  background-color: transparent;
+  border: 0px;
+  margin-left: 10px;
+  
+ }

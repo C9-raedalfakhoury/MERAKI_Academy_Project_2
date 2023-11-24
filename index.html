@@ -8,6 +8,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://kit.fontawesome.com/036a0409a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -71,11 +72,14 @@
       <img class="imgtop" src="./images/cart4.svg" />
       <img class="imgPop" src="" />
 
-      <h2></h2>
+      <h2 class="poph2"></h2>
       <p class="detail">your details has been successful submitted. thanks!</p>
       <button type="button" class="OK">OK</button>
     </div>
     <section class="myCart">
+      <div class="arrowBack">
+       <button class="arrowBack" onclick="hide()"> <i class="fa-solid fa-arrow-left"></i></button>
+      </div>
       <div class="headerBasket">
         <div>Product</div>
         <div class="data">
@@ -86,6 +90,7 @@
       </div>
       <h1 class="totalPrice"></h1>
     </section>
+   
     <script src="./main.js"></script>
   </body>
 </html>
