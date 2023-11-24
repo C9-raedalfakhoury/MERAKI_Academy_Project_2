@@ -60,38 +60,7 @@ const products = [
     Quantity: 1,
   },
 ];
-// const products2 = [
-//   {
-//     id: 1,
-//     title: "about product1",
-//     imageSrc: "./images/phone2.jpeg",
-//     description:
-//       "1 a wireless handheld device that allows users to make and receive calls.",
-//     rate: "⭐⭐⭐",
-//     price: 19,
-//     Quantity: 1,
-//   },
-//   {
-//     id: 2,
-//     title: "about product2",
-//     imageSrc: "./images/phone2.jpeg",
-//     description:
-//       "2 a wireless handheld device that allows users to make and receive calls.",
-//     rate: "⭐⭐⭐⭐⭐",
-//     price: 25,
-//     Quantity: 1,
-//   },
-//   {
-//     id: 3,
-//     title: "about product3",
-//     imageSrc: "./images/phone2.jpeg",
-//     description:
-//       "3 a wireless handheld device that allows users to make and receive calls.",
-//     rate: "⭐⭐⭐",
-//     price: 23,
-//     Quantity: 1,
-//   },
-// ];
+ 
 const body = $("body");
 
 const btnMode = $("#mode");
@@ -102,10 +71,79 @@ function toggle() {
     body.css({
       "background-color": " black",
     });
+    $("#searchBtn").css({
+      "background-color": "goldenrod",
+    });
+    $("#header").css({
+      "background-color": " goldenrod",
+    });
+    $("P").css({
+      " color": " goldenrod",
+    });
+    $(".master").css({
+      "background-color": " rgb(75, 65, 65",
+    });
+    $(".logoSearch").css({
+      "background-color": " rgb(75, 65, 65",
+    });
+    $(".arrowBack").css({
+      "background-color": " transparent",
+    });
+    $(".myCart").css({
+      "background-color": " rgb(75, 65, 65",
+      color: " #c2d9ff",
+    });
+    $(".pft").css({
+      "background-color": " #c2d9ff",
+    });
+    $(".addToCart").css({
+      "background-color": " goldenrod",
+    });
+    $(".link").css({
+      "background-color": " goldenrod",
+    });
+    btnMode.css({
+      "background-color": " goldenrod",
+    });
   } else if (btnMode.val() === "LightMode") {
     btnMode.val("DarkMode");
-    body.css({
-      "background-color": " white",
+    // body.css({
+    //   "background-color": " white",
+    // });
+    // !!
+    $("#header").css({
+      "background-color": "var(--button) ",
+    });
+    $(".master").css({
+      "background-color": "white",
+    });
+    $(".logoSearch").css({
+      "background-color": "white",
+    });
+    $(".arrowBack").css({
+      "background-color": " transparent",
+    });
+    $(".myCart").css({
+      "background-color": " rgb(75, 65, 65",
+      color: " #c2d9ff",
+    });
+    $(".pft").css({
+      "background-color": " #c2d9ff",
+    });
+    $(".addToCart").css({
+      "background-color": "  var(--button)",
+    });
+    $(".link").css({
+      "background-color": "  var(--button)",
+    });
+    btnMode.css({
+      "background-color": " var(--button)",
+    });
+    $("#searchBtn").css({
+      "background-color": " var(--button)",
+    });
+    $("p").css({
+      " color": " goldenrod",
     });
   }
 }
@@ -122,7 +160,6 @@ let totalPrice = [];
 const myListProduct = JSON.parse(localStorage.getItem("myListProduct")) || [];
 
 let aa = 0;
-
 
 // !! --------render-------------
 
@@ -165,8 +202,6 @@ const renderallproducts = () => {
   });
   // !! -----------for addToCard -----------
   $(".addToCard").on("click", function () {
-   
-
     const xx = products.find((x) => x.id == $(this)[0].id);
     if (myListProduct.includes(xx)) {
       totalPrice.push(xx.price);
@@ -189,7 +224,7 @@ const renderallproducts = () => {
       (accumulator, currentValue) => accumulator + currentValue,
       0
     );
-    localStorage.setItem("totalQuantity",totalQuantity)
+    localStorage.setItem("totalQuantity", totalQuantity);
     console.log(totalQuantity);
     $(".arrowBack").css({
       display: "block",
@@ -199,7 +234,9 @@ const renderallproducts = () => {
   });
 
   const myBasket = $(
-    `<input type="button" id="Basket" onclick="basketScreen()" value="My Basket (${localStorage.getItem('totalQuantity')||0})">`
+    `<input type="button" id="Basket" onclick="basketScreen()" value="My Basket (${
+      localStorage.getItem("totalQuantity") || 0
+    })">`
   );
 
   $(".baskesBin").append(myBasket);
@@ -208,6 +245,7 @@ const renderallproducts = () => {
 // !! ----------finish render-------------
 
 function basketScreen() {
+  $(".totalPrice").show();
   $(".headerBasket").css({
     display: "flex",
   });
@@ -221,7 +259,7 @@ function basketScreen() {
     (accumulator, currentValue) => accumulator + currentValue,
     0
   );
-   
+
   $(".arrowBack").css({
     display: "block",
   });
@@ -234,22 +272,25 @@ function basketScreen() {
   $("#header").css({
     display: "none",
   });
-  const w = JSON.parse(localStorage.getItem("myListProduct"));
+  const basketList = JSON.parse(localStorage.getItem("myListProduct"));
 
-  w?.forEach((elem, index) => {
+  basketList?.forEach((elem, index) => {
     console.log(index);
 
     const final = $(`<div id= ${index + 1} class="myProduct">
          
-  <div><img src=${JSON.stringify(elem.imageSrc)}/></div>
+  <div class="imgTrash"><img src=${JSON.stringify(elem.imageSrc)}/> <button class="bt" " ><i class="fa-solid fa-trash-can"></i></button></div>
   <div class="pft">
     <p>${elem.price}</p>
     <p>${elem.Quantity} </p>
     <p>${elem.price * elem.Quantity}</p>
-    <button class="bt" onclick="aaa( )" >Delete</button>
+    
   </div>
  
 </div>`);
+$(".bt").on('click',function() {
+   this.remove()
+})
     $(".myCart").append(final);
   });
   for (let index = 0; index < totalPrice.length; index++) {
@@ -259,10 +300,10 @@ function basketScreen() {
   $(".totalPrice").text("Total Price" + " " + sumWithInitial);
 }
 const hide = function () {
-  $('.totalPrice').hide()
+  $(".totalPrice").hide();
   $(".arrowBack").hide();
   $(".headerBasket").hide();
-  $(".myProduct").hide();
+  $(".myProduct").hide(1000);
   $("#section").css({
     display: "grid",
   });
@@ -271,6 +312,4 @@ const hide = function () {
   });
 };
 
-// $(".bt").on("click",aaa)
 $(window).on("load", renderallproducts(products));
- 
