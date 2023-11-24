@@ -191,6 +191,16 @@ body {
   row-gap: 20px;
   justify-items: center;
 }
+.master2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -233,6 +243,14 @@ p {
   width: 100%;
 }
 .addToCard {
+  background-color: var(--button);
+  color: var(--blue);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.addToCard1 {
   background-color: var(--button);
   color: var(--blue);
   font-size: 14px;
