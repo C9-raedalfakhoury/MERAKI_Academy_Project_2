@@ -290,42 +290,47 @@ function basketScreen() {
 </div>`);
  
 $(".bt").on("click", function () {
-  const indexToRemove = $(this).closest(".myProduct").attr("id") - 1;
+  const productIdToRemove = $(this).closest(".myProduct").attr("id");
 
-  // Remove the product from the array in memory
-  myListProduct.splice(indexToRemove, 1);
-  totalPrice.splice(indexToRemove, 1);
+  // Find the product in myListProduct array by id
+  const indexToRemove = myListProduct.findIndex((product) => product.id.toString() === productIdToRemove);
 
-  // Save the updated array back to local storage
-  localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
-  localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
+  if (indexToRemove !== -1) {
+    // Remove the product from the array in memory
+    myListProduct.splice(indexToRemove, 1);
+    totalPrice.splice(indexToRemove, 1);
 
-  // Remove the corresponding HTML element
-  $(this).closest(".myProduct").remove();
+    // Save the updated array back to local storage
+    localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
+    localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
 
-  // Recalculate total price
-  const finalPrice = JSON.parse(localStorage.getItem("myListProduct"))?.map(
-    (ele) => ele.price * ele.Quantity
-  );
+    // Remove the corresponding HTML element
+    $(this).closest(".myProduct").remove();
 
-  const sumWithInitial = finalPrice?.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    0
-  );
+    // Recalculate total price
+    const finalPrice = JSON.parse(localStorage.getItem("myListProduct"))?.map(
+      (ele) => ele.price * ele.Quantity
+    );
 
-  // Update the total price display
-  $(".totalPrice").text("Total Price" + " " + sumWithInitial);
+    const sumWithInitial = finalPrice?.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
 
-  // Update the total quantity in the basket
-  const finalQuantity = JSON.parse(localStorage.getItem("myListProduct"))?.map(
-    (ele) => ele.Quantity
-  );
-  const totalQuantity = finalQuantity?.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    0
-  );
-  localStorage.setItem("totalQuantity", totalQuantity);
-  $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
+    // Update the total price display
+    $(".totalPrice").text("Total Price" + " " + sumWithInitial);
+
+    // Update the total quantity in the basket
+    const finalQuantity = JSON.parse(localStorage.getItem("myListProduct"))?.map(
+      (ele) => ele.Quantity
+    );
+    const totalQuantity = finalQuantity?.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    localStorage.setItem("totalQuantity", totalQuantity);
+    $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
+  }
 });
     $(".myCart").append(final);
   });
