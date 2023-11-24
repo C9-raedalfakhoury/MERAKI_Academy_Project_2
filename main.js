@@ -118,13 +118,15 @@ function close() {
   });
 }
 
-let counter = 0;
 let totalPrice = [];
 const myListProduct = JSON.parse(localStorage.getItem("myListProduct")) || [];
 
 let aa = 0;
 
-const render = () => {
+
+// !! --------render-------------
+
+const renderallproducts = () => {
   products.forEach((elem, index) => {
     const item = $(` <div id="${index + 1}"  class="cardbutton">
     <div id="${index + 1}" class="card"  title="click for more details">
@@ -146,6 +148,7 @@ const render = () => {
   </div>`);
     $(".master").append(item);
   });
+  // !! for popup------------------------
   $(".card").on("click", function open() {
     $(".poph2").text(products[$(this)[0].id - 1].title);
     $(".imgPop")[0].src = products[$(this)[0].id - 1].imageSrc;
@@ -160,23 +163,9 @@ const render = () => {
       "pointer-events": "none",
     });
   });
-
+  // !! -----------for addToCard -----------
   $(".addToCard").on("click", function () {
-    const finalQuantity = JSON.parse(
-      localStorage.getItem("myListProduct")
-    )?.map((ele) => {
-      return ele.Quantity;
-    });
-    const totalQuantity = finalQuantity?.reduce(
-      (accumulator, currentValue) => accumulator + currentValue,
-      0
-    );
-    console.log(totalQuantity);
-    $(".").css({
-      display: "block",
-    });
-
-    $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
+   
 
     const xx = products.find((x) => x.id == $(this)[0].id);
     if (myListProduct.includes(xx)) {
@@ -191,30 +180,48 @@ const render = () => {
       localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
       localStorage.setItem("totalPrice", totalPrice);
     }
+    const finalQuantity = JSON.parse(
+      localStorage.getItem("myListProduct")
+    )?.map((ele) => {
+      return ele.Quantity;
+    });
+    const totalQuantity = finalQuantity?.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    localStorage.setItem("totalQuantity",totalQuantity)
+    console.log(totalQuantity);
+    $(".arrowBack").css({
+      display: "block",
+    });
+
+    $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
   });
+
   const myBasket = $(
-    `<input type="button" id="Basket" onclick="basketScreen()" value="My Basket (0)">`
+    `<input type="button" id="Basket" onclick="basketScreen()" value="My Basket (${localStorage.getItem('totalQuantity')||0})">`
   );
 
   $(".baskesBin").append(myBasket);
   $(".OK").on("click", close);
 };
-function basketScreen() {
-  // JSON.parse(localStorage.getItem("myListProduct"))?.forEach((ele)=>{
-  //   console.log(ele.Quantity*ele.price);
-  // })
+// !! ----------finish render-------------
 
+function basketScreen() {
+  $(".headerBasket").css({
+    display: "flex",
+  });
   const finalPrice = JSON.parse(localStorage.getItem("myListProduct"))?.map(
     (ele) => {
       return ele.price * ele.Quantity;
     }
   );
 
-  const sumWithInitial = finalPrice.reduce(
+  const sumWithInitial = finalPrice?.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
   );
-  console.log(sumWithInitial);
+   
   $(".arrowBack").css({
     display: "block",
   });
@@ -239,7 +246,7 @@ function basketScreen() {
     <p>${elem.price}</p>
     <p>${elem.Quantity} </p>
     <p>${elem.price * elem.Quantity}</p>
-    <button class="bt" onclick="aaa(${index})" id=d${index}>Delete</button>
+    <button class="bt" onclick="aaa( )" >Delete</button>
   </div>
  
 </div>`);
@@ -252,7 +259,7 @@ function basketScreen() {
   $(".totalPrice").text("Total Price" + " " + sumWithInitial);
 }
 const hide = function () {
-  // $('.totalPrice').hide()
+  $('.totalPrice').hide()
   $(".arrowBack").hide();
   $(".headerBasket").hide();
   $(".myProduct").hide();
@@ -263,31 +270,7 @@ const hide = function () {
     display: "flex",
   });
 };
-function aaa(index) {
-  myListProduct.splice(index, 1);
-  localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
-  const w = JSON.parse(localStorage.getItem("myListProduct"));
 
-  w?.forEach((elem, index) => {
-    console.log(index);
-
-    const final = $(`<div id= ${index + 1} class="myProduct">
-       
-<div><img src=${JSON.stringify(elem.imageSrc)}/></div>
-<div class="pft">
-  <p>${elem.price}</p>
-  <p>${elem.Quantity} </p>
-  <p>${elem.price * elem.Quantity}</p>
-  <button class="bt" onclick="aaa(${index})" id=d${index}>Delete</button>
-</div>
-
-</div>`);
-    $(".myCart").append(final);
-  });
-  console.log(myListProduct);
-  //  localStorage.setItem("myListProduct",myListProduct)
-}
 // $(".bt").on("click",aaa)
-$(window).on("load", render(products));
-
-//------------${--------------------local storage
+$(window).on("load", renderallproducts(products));
+ 
