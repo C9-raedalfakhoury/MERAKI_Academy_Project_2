@@ -5,15 +5,16 @@
   --golden: goldenrod
   
 }
-p{
-  color: black;
-}
+ 
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   /* background-color: transparent; */
   
+}
+.p{
+  color: black;
 }
 body {
   font-family: cursive;
@@ -161,7 +162,7 @@ body {
   position: sticky;
   top: 58px;
   background-color: var(--button);
-  margin-bottom: 5px;
+   
 }
 .category {
   border: 0px;
@@ -202,6 +203,26 @@ body {
   row-gap: 20px;
   justify-items: center;
 }
+.master3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+}
+.master4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -212,6 +233,49 @@ body {
   cursor: pointer;
   align-items: center;
   border-radius: 0px 20px ;
+  box-shadow: 10px 20px 30px goldenrod;
+  margin: 5PX;
+}
+.cardMobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 2px;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 0px 20px ;
+  box-shadow: 10px 20px 30px goldenrod;
+  margin: 5PX;
+}
+.cardClothes {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 2px;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 0px 20px ;
+  box-shadow: 10px 20px 30px goldenrod;
+  margin: 5PX;
+  
+}
+.cardWhenSearch {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 2px;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 0px 20px ;
+  box-shadow: 10px 20px 30px goldenrod;
+  margin: 5PX;
+  
 }
 
 p {
@@ -223,10 +287,13 @@ p {
   font-size: 25px;
   padding-bottom: 2px;
   font-family: inherit;
+  color: black;
 }
 #image {
-  width: 250px;
-  height: 300px;
+  width: 240px;
+  height: 290px;
+  padding: 5px;
+  border-radius: 0px 20px ;
 }
 #iconPrice {
   display: flex;
@@ -253,6 +320,22 @@ p {
   width: 100%;
 }
 .addToCard1 {
+  background-color: var(--button);
+  color: var(--blue);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.addToCard2 {
+  background-color: var(--button);
+  color: var(--blue);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.addToCardWhenSearch {
   background-color: var(--button);
   color: var(--blue);
   font-size: 14px;
@@ -312,7 +395,7 @@ p {
   transition: transform 1s, top 1s;
 }
 .imgtop {
-  margin-top: -50px;
+  margin-top: -150px;
   width: 100px;
   height: 100px;
   background-color: transparent;
@@ -327,11 +410,16 @@ p {
   font-size: 14px;
   font-weight: 600;
 }
+.imgPop{
+  width: 200px;
+  height: 200px;
+}
 /* !! my basket */
 .myCart {
   display: none;
   flex-direction: column;
   position: relative;
+  height: 100vb;
 }
 .headerBasket {
   display: flex;
@@ -403,10 +491,12 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 200px;
 }
-.imgTrash img{
-  width: 100px;
+.imgbask{
+  width: 200px;
   height:100px ;
+  align-items: center;
 }
 .bt{
   width: 100%;
