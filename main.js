@@ -1,7 +1,69 @@
 const products = [
   {
     id: 1,
-    title: "about product1",
+    title: "adidas 1",
+    imageSrc: "./images/redshoes.png",
+    description:
+      "1 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐",
+    price: 50,
+    Quantity: 1,
+  },
+  {
+    id: 2,
+    title: "nike 2",
+    imageSrc: "./images/wshoes.png",
+    description:
+      "2 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 60,
+    Quantity: 1,
+  },
+  {
+    id: 3,
+    title: "buma 3",
+    imageSrc: "./images/ccc.png",
+    description:
+      "3 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐",
+    price: 70,
+    Quantity: 1,
+  },
+  { 
+    id: 4,
+    title: "adidas 4",
+    imageSrc: "./images/ccccc-removebg-preview.png",
+    description:
+      "4 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 80,
+    Quantity: 1,
+  },
+  {
+    id: 5,
+    title: "adidas 5",
+    imageSrc: "./images/aa.png",
+    description:
+      "5 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐⭐",
+    price: 90,
+    Quantity: 1,
+  },
+  {
+    id: 6,
+    title: "adidas 6",
+    imageSrc: "./images/cv.png",
+    description:
+      "6 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐",
+    price: 100,
+    Quantity: 1,
+  },
+] 
+const mobile = [
+  {
+    id: 1,
+    title: "I PHONE X",
     imageSrc: "./images/phone1.jpeg",
     description:
       "1 a wireless handheld device that allows users to make and receive calls.",
@@ -11,8 +73,8 @@ const products = [
   },
   {
     id: 2,
-    title: "about product2",
-    imageSrc: "./images/phone1.jpeg",
+    title: "I PHONE 11PRO MAX",
+    imageSrc: "./images/phone2.jpeg",
     description:
       "2 a wireless handheld device that allows users to make and receive calls.",
     rate: "⭐⭐⭐⭐⭐",
@@ -21,59 +83,38 @@ const products = [
   },
   {
     id: 3,
-    title: "about product3",
-    imageSrc: "./images/phone1.jpeg",
+    title: "I PHONE 12PRO MAX",
+    imageSrc: "./images/phone4.jpeg",
     description:
-      "3 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐",
-    price: 23,
+      "2 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 24,
     Quantity: 1,
   },
   {
     id: 4,
-    title: "about product4",
-    imageSrc: "./images/phone1.jpeg",
+    title: "I PHONE 13PRO MAX",
+    imageSrc: "./images/phone5.jpeg",
     description:
-      "4 a wireless handheld device that allows users to make and receive calls.",
+      "2 a wireless handheld device that allows users to make and receive calls.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 22,
+    price: 24,
     Quantity: 1,
   },
   {
     id: 5,
-    title: "about product5",
-    imageSrc: "./images/phone1.jpeg",
+    title: "I PHONE 14PRO MAX",
+    imageSrc: "./images/phone6.jpeg",
     description:
-      "5 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐",
-    price: 21,
+      "2 a wireless handheld device that allows users to make and receive calls.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 24,
     Quantity: 1,
   },
   {
     id: 6,
-    title: "about product6",
-    imageSrc: "./images/phone1.jpeg",
-    description:
-      "6 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐",
-    price: 20,
-    Quantity: 1,
-  },
-];const mobile = [
-  {
-    id: 1,
-    title: "about product1",
-    imageSrc: "./images/phone1.jpeg",
-    description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐",
-    price: 25,
-    Quantity: 1,
-  },
-  {
-    id: 2,
-    title: "about product2",
-    imageSrc: "./images/phone1.jpeg",
+    title: "I PHONE 15PRO MAX",
+    imageSrc: "./images/phone7.jpeg",
     description:
       "2 a wireless handheld device that allows users to make and receive calls.",
     rate: "⭐⭐⭐⭐⭐",
@@ -289,9 +330,9 @@ const renderMobile = () => {
   });
   // !! for popup------------------------
   $(".card").on("click", function open() {
-    $(".poph2").text(products[$(this)[0].id - 1].title);
-    $(".imgPop")[0].src = products[$(this)[0].id - 1].imageSrc;
-    $(".detail").text(products[$(this)[0].id - 1].description);
+    $(".poph2").text(mobile[$(this)[0].id - 1].title);
+    $(".imgPop")[0].src = mobile[$(this)[0].id - 1].imageSrc;
+    $(".detail").text(mobile[$(this)[0].id - 1].description);
     $(".popup").css({
       visibility: "visible",
       transform: "translate(-50%,-50%) scale(1)",
@@ -304,7 +345,7 @@ const renderMobile = () => {
   });
   // !! -----------for addToCard -----------
   $(".addToCard1").on("click", function () {
-    const xx = products.find((x) => x.id == $(this)[0].id);
+    const xx = mobile.find((x) => x.id == $(this)[0].id);
     if (myListProduct.includes(xx)) {
       totalPrice.push(xx.price);
       localStorage.setItem("totalPrice", totalPrice);
@@ -379,7 +420,7 @@ const  basketScreen=()=> {
   const basketList = JSON.parse(localStorage.getItem("myListProduct"));
 
   basketList?.forEach((elem, index) => {
-    console.log(index);
+ 
 
     const final = $(`<div id= ${index + 1} class="myProduct">
          

@@ -161,6 +161,7 @@ body {
   position: sticky;
   top: 58px;
   background-color: var(--button);
+  margin-bottom: 5px;
 }
 .category {
   border: 0px;
@@ -210,6 +211,7 @@ body {
   height: 100%;
   cursor: pointer;
   align-items: center;
+  border-radius: 0px 20px ;
 }
 
 p {
@@ -223,8 +225,8 @@ p {
   font-family: inherit;
 }
 #image {
-  width: 100%;
-  height: 89%;
+  width: 250px;
+  height: 300px;
 }
 #iconPrice {
   display: flex;
@@ -401,6 +403,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.imgTrash img{
+  width: 100px;
+  height:100px ;
 }
 .bt{
   width: 100%;
