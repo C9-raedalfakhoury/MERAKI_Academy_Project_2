@@ -311,6 +311,14 @@ p {
   cursor: pointer;
   width: 100%;
 }
+.addToCartSearch {
+  background-color: var(--button);
+  color: var(--blue);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
 .addToCard {
   background-color: var(--button);
   color: var(--blue);
@@ -371,6 +379,7 @@ p {
   border-radius: 30px;
   font-size: 18px;
   font-weight: bold;
+  margin: 10px 0px 0px ;
 }
 .popup {
   /* z-index: 1000; */
@@ -504,4 +513,58 @@ p {
   background-color: transparent;
   border: 0px;
   cursor: pointer;
+}
+#checkOut{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #414a83;
+
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.1);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 30px;
+  transition: transform 1s, top 1s;
+  
+}
+.nameCustomer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.postalCode{
+  display: flex;
+  gap: 20px;
+}
+.radio{
+  display: flex;
+  gap: 20px;
+}
+.order{
+  position: absolute;
+  bottom: 0px;
+  left: 20%;
+  border-top: goldenrod;
+  width: 40px;
+}
+#order{
+  font-size: 18px;
+  border: 1px solid var(--blue);
+  background-color: var(--button);
+  color: var(--blue);
+  padding: 5px;
+  border-radius: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100px;
 }

@@ -59,7 +59,7 @@
       <div class="link">
         <button id="mobile" class="category" >Mobile</button>
         <div class="line"></div>
-        <button id="shoes" class="category">Shoes</button>
+        <button id="laptop" class="category">Laptop</button>
         <div class="line"></div>
         <button id="clothes" class="category">clothes</button>
        
@@ -93,6 +93,40 @@
         </div>
       </div>
       <h1 class="totalPrice"></h1>
+      <div class="order">
+        <input type="button" name="order" id="order" value="Check Out">
+        </div>
+      
+      <div id="checkOut">
+        <div class="nameCustomer">
+          <input type="text" class="firstName" placeholder="First Name:">
+          <input type="text" class="lastName" placeholder="Last Name" >
+        </div>
+        <div class="email">
+          <input type="email" placeholder="Email:">
+        </div>
+        <div class="number">
+          <input type="text" placeholder="Type Your Number Phone">
+        </div>
+        <div class="postalCode">
+          <input type="number" placeholder="Postal Code">
+          <select name="Amman" id="place">
+            <option value="Amman">Amman</option>
+            <option value="Zarqa">Zarqa</option>
+            <option value="Irbid">Irbid</option>
+            <option value="Aqaba">Aqaba</option>
+          </select>
+        </div>
+        <p class="paymentMethod">Payment method:</p>
+        <div class="radio">
+          <input type="radio" id="OnDelivery" name="method" value="OnDelivery">
+          <label for="">OnDelivery</label>
+          <input type="radio" id="paypal" name="method" value="Paypal">
+          <label for="">paypal</label>
+          
+        </div>
+        <input type="submit" class="submit" value="submit">
+      </div>
     </section>
    
     <script src="./main.js"></script>

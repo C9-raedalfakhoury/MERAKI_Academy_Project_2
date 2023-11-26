@@ -1,62 +1,62 @@
-const shoes = [
+const laptop = [
   {
     id: 1,
-    title: "adidas 1",
-    imageSrc: "./images/redshoes.png",
+    title: "Acer",
+    imageSrc: "./images/ACER.png",
     description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
+      "The incredibly fast wireless connection and amazing battery life give you all day to run your favorite Google apps or browse the web, access photos, videos, music and docs.",
     rate: "⭐⭐⭐",
-    price: 50,
+    price: 270,
     Quantity: 1,
   },
   {
     id: 2,
-    title: "nike 2",
-    imageSrc: "./images/wshoes.png",
+    title: "Apple",
+    imageSrc: "./images/APPLE.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Apple has a small laptop lineup compared to other brands like Dell, HP, Lenovo, and ASUS, as they only make premium productivity-focused laptops.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 60,
+    price: 540,
     Quantity: 1,
   },
   {
     id: 3,
-    title: "buma 3",
-    imageSrc: "./images/ccc.png",
+    title: "ASUS",
+    imageSrc: "./images/asus.png",
     description:
-      "3 a wireless handheld device that allows users to make and receive calls.",
+      "ASUS is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐",
     price: 70,
     Quantity: 1,
   },
   {
     id: 4,
-    title: "adidas 4",
-    imageSrc: "./images/ccccc-removebg-preview.png",
+    title: "Dell",
+    imageSrc: "./images/dell.png",
     description:
-      "4 a wireless handheld device that allows users to make and receive calls.",
+      "Dell is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 80,
+    price: 175,
     Quantity: 1,
   },
   {
     id: 5,
-    title: "adidas 5",
-    imageSrc: "./images/aa.png",
+    title: "HP",
+    imageSrc: "./images/hp.png",
     description:
-      "5 a wireless handheld device that allows users to make and receive calls.",
+      "HP is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐⭐",
-    price: 90,
+    price: 350,
     Quantity: 1,
   },
   {
     id: 6,
-    title: "adidas 6",
-    imageSrc: "./images/cv.png",
+    title: "Lenovo",
+    imageSrc: "./images/lenovo.png",
     description:
-      "6 a wireless handheld device that allows users to make and receive calls.",
+      "High-quality components: Lenovo uses high-quality components in its laptops, such as Intel processors, solid-state drives, and high-resolution displays, which have contributed to the performance and durability of the devices.",
     rate: "⭐⭐⭐",
-    price: 100,
+    price: 780,
     Quantity: 1,
   },
 ];
@@ -65,59 +65,59 @@ const mobile = [
   {
     id: 1,
     title: "I PHONE X",
-    imageSrc: "./images/phone1.jpeg",
+    imageSrc: "./images/phone1.png",
     description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 2.8 inches) in the padded sleeve, your everyday.",
     rate: "⭐⭐⭐",
-    price: 25,
+    price: 140,
     Quantity: 1,
   },
   {
     id: 2,
     title: "I PHONE 11PRO MAX",
-    imageSrc: "./images/phone2.jpeg",
+    imageSrc: "./images/IPhone-11-pro-Max-removebg-preview.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "An original Apple iPhone model will always have an IMEI number. If there is no IMEI number, it is likely that the model is fake.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 500,
     Quantity: 1,
   },
   {
     id: 3,
     title: "I PHONE 12PRO MAX",
-    imageSrc: "./images/phone4.jpeg",
+    imageSrc: "./images/iPhone-12.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "The Apple iPhone 12 Pro Max (14th Gen) has height of 6.33” (160.8 mm), width of 3.07” (78.1 mm), depth of . 29” (7.4 mm), and weighs 8.03 oz (228 g).",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 700,
     Quantity: 1,
   },
   {
     id: 4,
     title: "I PHONE 13PRO MAX",
-    imageSrc: "./images/phone5.jpeg",
+    imageSrc: "./images/iphone-13.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "The iPhone 13 Pro Max has a battery of 3,095 mAh with video playback of up to 19 hours and audio playback of up to 75 hours.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 850,
     Quantity: 1,
   },
   {
     id: 5,
     title: "I PHONE 14PRO MAX",
-    imageSrc: "./images/phone6.jpeg",
+    imageSrc: "./images/iPhone-14-PNG-Photos-removebg-preview.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "The iPhone 14 Pro and Pro Max feature a new A16 Bionic system on a chip (SoC), built on TSMC's N4 fabrication process, superseding the A15 Bionic seen on the iPhone 13 and 13 Pro lineup, the 3rd generation iPhone SE, and the iPhone 14 and 14 Plus.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 960,
     Quantity: 1,
   },
   {
     id: 6,
     title: "I PHONE 15PRO MAX",
-    imageSrc: "./images/phone7.jpeg",
+    imageSrc: "./images/p15.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Higher Resolution: The iPhone 15 Pro Max packs a 48-megapixel main camera which is a significant upgrade in resolution compared to the iPhone 12's 12-megapixels. Telephoto: Having a telephoto lens is one thing, but you'll be upgrading to a 3× or 5× optical zoom. That's a lot of reach.",
     rate: "⭐⭐⭐⭐⭐",
     price: 24,
     Quantity: 1,
@@ -127,244 +127,244 @@ const mobile = [
 const clothes = [
   {
     id: 1,
-    title: "T-SHIRT",
-    imageSrc: "./images/j1.png",
+    title: "T-Shirt",
+    imageSrc: "./images/t1.png",
     description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
+      "casual wear and come in various styles, designs, and materials.",
     rate: "⭐⭐⭐",
-    price: 25,
+    price: 15,
     Quantity: 1,
   },
   {
     id: 2,
-    title: "I PHONE 11PRO MAX",
-    imageSrc: "./images/j3.png",
+    title: "Jeans",
+    imageSrc: "./images/t2.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Denim is a sturdy cotton warp-faced textile in which the weft passes under two or more warp threads. This twill weave produces a diagonal ribbing that distinguishes it from cotton duck.",
     rate: "⭐⭐⭐⭐⭐",
     price: 24,
     Quantity: 1,
   },
   {
     id: 3,
-    title: "I PHONE 12PRO MAX",
-    imageSrc: "./images/j4.jpeg",
+    title: "Necktie",
+    imageSrc: "./images/j3.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "A quality tie is usually made of either 100% pure silk or wool, and while blends of various materials can be found, it's best to steer clear of any man-made fibers such as polyester.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 5,
     Quantity: 1,
   },
   {
     id: 4,
-    title: "I PHONE 13PRO MAX",
-    imageSrc: "./images/j7.jpeg",
+    title: "Socks",
+    imageSrc: "./images/socks.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+      "Crew socks are mid-length and come up to the middle of your calf. They are the most popular sock type because they can be worn with almost anything.",
+    rate: "⭐⭐⭐",
+    price: 1.50,
     Quantity: 1,
   },
   {
     id: 5,
-    title: "I PHONE 14PRO MAX",
-    imageSrc: "./images/j8.jpeg",
+    title: "Nike",
+    imageSrc: "./images/cv.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 30,
     Quantity: 1,
   },
   {
     id: 6,
-    title: "I PHONE 15PRO MAX",
-    imageSrc: "./images/j9.webp",
+    title: "Coat",
+    imageSrc: "./images/coat.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Definitions of coat. an outer garment that has sleeves and covers the body from shoulder down; worn outdoors.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 45,
     Quantity: 1,
   },
 ];
 const allProducts=[
   {
     id: 1,
-    title: "adidas 1",
-    imageSrc: "./images/redshoes.png",
+    title: "I PHONE X",
+    imageSrc: "./images/phone1.png",
     description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 2.8 inches) in the padded sleeve, your everyday.",
     rate: "⭐⭐⭐",
-    price: 50,
+    price: 140,
     Quantity: 1,
   },
   {
     id: 2,
-    title: "nike 2",
-    imageSrc: "./images/wshoes.png",
+    title: "I PHONE 11PRO MAX",
+    imageSrc: "./images/IPhone-11-pro-Max-removebg-preview.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "An original Apple iPhone model will always have an IMEI number. If there is no IMEI number, it is likely that the model is fake.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 60,
+    price: 500,
     Quantity: 1,
   },
   {
     id: 3,
-    title: "buma 3",
-    imageSrc: "./images/ccc.png",
+    title: "I PHONE 12PRO MAX",
+    imageSrc: "./images/iPhone-12.png",
     description:
-      "3 a wireless handheld device that allows users to make and receive calls.",
+      "The Apple iPhone 12 Pro Max (14th Gen) has height of 6.33” (160.8 mm), width of 3.07” (78.1 mm), depth of . 29” (7.4 mm), and weighs 8.03 oz (228 g).",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 700,
+    Quantity: 1,
+  },
+  {
+    id: 4,
+    title: "I PHONE 13PRO MAX",
+    imageSrc: "./images/iphone-13.png",
+    description:
+      "The iPhone 13 Pro Max has a battery of 3,095 mAh with video playback of up to 19 hours and audio playback of up to 75 hours.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 850,
+    Quantity: 1,
+  },
+  {
+    id: 5,
+    title: "I PHONE 14PRO MAX",
+    imageSrc: "./images/iPhone-14-PNG-Photos-removebg-preview.png",
+    description:
+      "The iPhone 14 Pro and Pro Max feature a new A16 Bionic system on a chip (SoC), built on TSMC's N4 fabrication process, superseding the A15 Bionic seen on the iPhone 13 and 13 Pro lineup, the 3rd generation iPhone SE, and the iPhone 14 and 14 Plus.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 960,
+    Quantity: 1,
+  },
+  {
+    id: 6,
+    title: "I PHONE 15PRO MAX",
+    imageSrc: "./images/p15.png",
+    description:
+      "Higher Resolution: The iPhone 15 Pro Max packs a 48-megapixel main camera which is a significant upgrade in resolution compared to the iPhone 12's 12-megapixels. Telephoto: Having a telephoto lens is one thing, but you'll be upgrading to a 3× or 5× optical zoom. That's a lot of reach.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 24,
+    Quantity: 1,
+  },
+  {
+    id: 1,
+    title: "Acer",
+    imageSrc: "./images/ACER.png",
+    description:
+      "The incredibly fast wireless connection and amazing battery life give you all day to run your favorite Google apps or browse the web, access photos, videos, music and docs.",
+    rate: "⭐⭐⭐",
+    price: 270,
+    Quantity: 1,
+  },
+  {
+    id: 2,
+    title: "Apple",
+    imageSrc: "./images/APPLE.png",
+    description:
+      "Apple has a small laptop lineup compared to other brands like Dell, HP, Lenovo, and ASUS, as they only make premium productivity-focused laptops.",
+    rate: "⭐⭐⭐⭐⭐",
+    price: 540,
+    Quantity: 1,
+  },
+  {
+    id: 3,
+    title: "ASUS",
+    imageSrc: "./images/asus.png",
+    description:
+      "ASUS is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐",
     price: 70,
     Quantity: 1,
   },
   {
     id: 4,
-    title: "adidas 4",
-    imageSrc: "./images/ccccc-removebg-preview.png",
+    title: "Dell",
+    imageSrc: "./images/dell.png",
     description:
-      "4 a wireless handheld device that allows users to make and receive calls.",
+      "Dell is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 80,
+    price: 175,
     Quantity: 1,
   },
   {
     id: 5,
-    title: "adidas 5",
-    imageSrc: "./images/aa.png",
+    title: "HP",
+    imageSrc: "./images/hp.png",
     description:
-      "5 a wireless handheld device that allows users to make and receive calls.",
+      "HP is, in short, one of the most revered and innovative manufacturers on the market. Its products are simply phenomenal and are amongst the most sought-after.",
     rate: "⭐⭐⭐⭐",
-    price: 90,
+    price: 350,
     Quantity: 1,
   },
   {
     id: 6,
-    title: "adidas 6",
-    imageSrc: "./images/cv.png",
+    title: "Lenovo",
+    imageSrc: "./images/lenovo.png",
     description:
-      "6 a wireless handheld device that allows users to make and receive calls.",
+      "High-quality components: Lenovo uses high-quality components in its laptops, such as Intel processors, solid-state drives, and high-resolution displays, which have contributed to the performance and durability of the devices.",
     rate: "⭐⭐⭐",
-    price: 100,
+    price: 780,
     Quantity: 1,
   },
   {
     id: 1,
-    title: "I PHONE X",
-    imageSrc: "./images/phone1.jpeg",
+    title: "T-Shirt",
+    imageSrc: "./images/t1.png",
     description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
+      "casual wear and come in various styles, designs, and materials.",
     rate: "⭐⭐⭐",
-    price: 25,
+    price: 15,
     Quantity: 1,
   },
   {
     id: 2,
-    title: "I PHONE 11PRO MAX",
-    imageSrc: "./images/phone2.jpeg",
+    title: "Jeans",
+    imageSrc: "./images/t2.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Denim is a sturdy cotton warp-faced textile in which the weft passes under two or more warp threads. This twill weave produces a diagonal ribbing that distinguishes it from cotton duck.",
     rate: "⭐⭐⭐⭐⭐",
     price: 24,
     Quantity: 1,
   },
   {
     id: 3,
-    title: "I PHONE 12PRO MAX",
-    imageSrc: "./images/phone4.jpeg",
-    description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
-    Quantity: 1,
-  },
-  {
-    id: 4,
-    title: "I PHONE 13PRO MAX",
-    imageSrc: "./images/phone5.jpeg",
-    description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
-    Quantity: 1,
-  },
-  {
-    id: 5,
-    title: "I PHONE 14PRO MAX",
-    imageSrc: "./images/phone6.jpeg",
-    description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
-    Quantity: 1,
-  },
-  {
-    id: 6,
-    title: "I PHONE 15PRO MAX",
-    imageSrc: "./images/phone7.jpeg",
-    description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
-    Quantity: 1,
-  },
-  {
-    id: 1,
-    title: "T-SHIRT",
-    imageSrc: "./images/j1.png",
-    description:
-      "1 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐",
-    price: 25,
-    Quantity: 1,
-  },
-  {
-    id: 2,
-    title: "T-SHIRT1",
+    title: "Necktie",
     imageSrc: "./images/j3.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "A quality tie is usually made of either 100% pure silk or wool, and while blends of various materials can be found, it's best to steer clear of any man-made fibers such as polyester.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
-    Quantity: 1,
-  },
-  {
-    id: 3,
-    title: "T-SHIRT2",
-    imageSrc: "./images/j4.jpeg",
-    description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 5,
     Quantity: 1,
   },
   {
     id: 4,
-    title: "T-SHIRT3",
-    imageSrc: "./images/j7.jpeg",
+    title: "Socks",
+    imageSrc: "./images/socks.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
-    rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+      "Crew socks are mid-length and come up to the middle of your calf. They are the most popular sock type because they can be worn with almost anything.",
+    rate: "⭐⭐⭐",
+    price: 1.50,
     Quantity: 1,
   },
   {
     id: 5,
-    title: "T-SHIRT4",
-    imageSrc: "./images/j8.jpeg",
+    title: "Nike",
+    imageSrc: "./images/cv.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 30,
     Quantity: 1,
   },
   {
     id: 6,
-    title: "T-SHIRT5",
-    imageSrc: "./images/j9.webp",
+    title: "Coat",
+    imageSrc: "./images/coat.png",
     description:
-      "2 a wireless handheld device that allows users to make and receive calls.",
+      "Definitions of coat. an outer garment that has sleeves and covers the body from shoulder down; worn outdoors.",
     rate: "⭐⭐⭐⭐⭐",
-    price: 24,
+    price: 45,
     Quantity: 1,
   },
 ];
@@ -380,85 +380,91 @@ $('#searchBtn').on('click',function(){
    let objectResult = allProducts.filter((elem)=>{
    return elem.title.toLowerCase().includes(inputValue);
   })
-  $(".master4").html('')
-  // $(".master").html('')
-  // $(".master2").html('')
-  // $(".master3").html('')
-   
-  $(".master2").hide(1000);
-  $(".master").hide(1000);
-  $(".master3").hide(1000);
-  $(".master4").show(1000);
-  
-  objectResult.forEach((elem, index) => {
-    const item = $(` <div id="${index + 1}"  class="cardbutton">
-    <div id="${index + 1}" class="cardWhenSearch"  title="click for more details">
-      <img id="image" src="${elem.imageSrc}" />
-      <div>
-        <p class="p">${elem.title}</p>
-      </div>
-      <div id="iconPrice">
-        <p class="price">$${elem.price}</p>
-        <div class="starIcon">
-        <h2>${elem.rate}</h2>
-        
+  if (inputValue==="") {
+    return;
+  }
+  else{
+    $(".master4").html('')
+    // $(".master").html('')
+    // $(".master2").html('')
+    // $(".master3").html('')
+     
+    $(".master2").hide(1000);
+    $(".master").hide(1000);
+    $(".master3").hide(1000);
+    $(".master4").show(1000);
+    
+    objectResult.forEach((elem, index) => {
+      const item = $(` <div id="${index + 1}"  class="cardbutton">
+      <div id="${index + 1}" class="cardWhenSearch"  title="click for more details">
+        <img id="image" src="${elem.imageSrc}" />
+        <div>
+          <p class="p">${elem.title}</p>
+        </div>
+        <div id="iconPrice">
+          <p class="price">$${elem.price}</p>
+          <div class="starIcon">
+          <h2>${elem.rate}</h2>
+          
+          </div>
         </div>
       </div>
-    </div>
-    <div id=${index + 1} class="addToCardWhenSearch"><button id=${
-      index + 1
-    } class="addToCart" >Add To Cart</button></div>
-  </div>`);
-    $(".master4").append(item);
-  });
-  // !! for popup shoes------------------------
-  $(".cardWhenSearch").on("click", function open() {
-    $(".poph2").text(objectResult[$(this)[0].id - 1].title);
-    $(".imgPop")[0].src = objectResult[$(this)[0].id - 1].imageSrc;
-    $(".detail").text(objectResult[$(this)[0].id - 1].description);
-    $(".popup").css({
-      visibility: "visible",
-      transform: "translate(-50%,-50%) scale(1)",
-      top: "50%",
+      <div id=${index + 1} class="addToCardWhenSearch"><button id=${
+        index + 1
+      } class="addToCart" >Add To Cart</button></div>
+    </div>`);
+      $(".master4").append(item);
     });
-    $(".master").css({
-      opacity: "0.4",
-      "pointer-events": "none",
+    // !! for popup laptop------------------------
+    $(".cardWhenSearch").on("click", function open() {
+      $(".poph2").text(objectResult[$(this)[0].id - 1].title);
+      $(".imgPop")[0].src = objectResult[$(this)[0].id - 1].imageSrc;
+      $(".detail").text(objectResult[$(this)[0].id - 1].description);
+      $(".popup").css({
+        visibility: "visible",
+        transform: "translate(-50%,-50%) scale(1)",
+        top: "50%",
+      });
+      $(".master").css({
+        opacity: "0.4",
+        "pointer-events": "none",
+      });
     });
-  });
-  // !! -----------for addToCard shoes-----------
-  $(".addToCard").on("click", function () {
-    const xx = objectResult.find((x) => x.id == $(this)[0].id);
-    if (myListProduct.includes(xx)) {
-      totalPrice.push(xx.price);
-      localStorage.setItem("totalPrice", totalPrice);
-      xx.Quantity++;
-      localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
-    } else {
-      myListProduct.push(xx);
-
-      totalPrice.push(xx.price);
-      localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
-      localStorage.setItem("totalPrice", totalPrice);
-    }
-    const finalQuantity = JSON.parse(
-      localStorage.getItem("myListProduct")
-    )?.map((ele) => {
-      return ele.Quantity;
-    });
-    const totalQuantity = finalQuantity?.reduce(
-      (accumulator, currentValue) => accumulator + currentValue,
-      0
-    );
-    localStorage.setItem("totalQuantity", totalQuantity);
-    console.log(totalQuantity);
-    $(".arrowBack").css({
-      display: "block",
-    });
-    $("#Basket").html(` My Basket  (${totalQuantity}) `);
-   });
- 
-  $(".OK").on("click", close);
+    // !! -----------for addToCard laptop-----------
+    $(".addToCard").on("click", function () {
+      const xx = objectResult.find((x) => x.id == $(this)[0].id);
+      if (myListProduct.includes(xx)) {
+        totalPrice.push(xx.price);
+        localStorage.setItem("totalPrice", totalPrice);
+        xx.Quantity++;
+        localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
+      } else {
+        myListProduct.push(xx);
+  
+        totalPrice.push(xx.price);
+        localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
+        localStorage.setItem("totalPrice", totalPrice);
+      }
+      const finalQuantity = JSON.parse(
+        localStorage.getItem("myListProduct")
+      )?.map((ele) => {
+        return ele.Quantity;
+      });
+      const totalQuantity = finalQuantity?.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+      localStorage.setItem("totalQuantity", totalQuantity);
+      console.log(totalQuantity);
+      $(".arrowBack").css({
+        display: "block",
+      });
+      $("#Basket").html(` My Basket  (${totalQuantity}) `);
+     });
+   
+    $(".OK").on("click", close);
+  }
+  
 })
    
  
@@ -467,6 +473,9 @@ function toggle() {
     btnMode.val("LightMode");
     //  ! -----------DARK------------
 
+    $(".totalPrice").css({
+      color: "white",
+    });
     $(".price").css({
       color: "white",
     });
@@ -523,6 +532,9 @@ function toggle() {
     //   "background-color": " white",
     // });
     // !! --------------LIGHT------------
+    $(".totalPrice").css({
+      color: "black",
+    });
     $(".price").css({
       color: "black",
     });
@@ -588,10 +600,10 @@ const myListProduct = JSON.parse(localStorage.getItem("myListProduct")) || [];
 
 let aa = 0;
 
-// !! --------render shoes-------------
+// !! --------render laptop-------------
 
-const redshoes = () => {
-  shoes.forEach((elem, index) => {
+const redlaptop = () => {
+  laptop.forEach((elem, index) => {
     const item = $(` <div id="${index + 1}"  class="cardbutton">
     <div id="${index + 1}" class="card"  title="click for more details">
       <img id="image" src="${elem.imageSrc}" />
@@ -612,11 +624,11 @@ const redshoes = () => {
   </div>`);
     $(".master").append(item);
   });
-  // !! for popup shoes------------------------
+  // !! for popup laptop------------------------
   $(".card").on("click", function open() {
-    $(".poph2").text(shoes[$(this)[0].id - 1].title);
-    $(".imgPop")[0].src = shoes[$(this)[0].id - 1].imageSrc;
-    $(".detail").text(shoes[$(this)[0].id - 1].description);
+    $(".poph2").text(laptop[$(this)[0].id - 1].title);
+    $(".imgPop")[0].src = laptop[$(this)[0].id - 1].imageSrc;
+    $(".detail").text(laptop[$(this)[0].id - 1].description);
     $(".popup").css({
       visibility: "visible",
       transform: "translate(-50%,-50%) scale(1)",
@@ -627,9 +639,9 @@ const redshoes = () => {
       "pointer-events": "none",
     });
   });
-  // !! -----------for addToCard shoes-----------
+  // !! -----------for addToCard laptop-----------
   $(".addToCard").on("click", function () {
-    const xx = shoes.find((x) => x.id == $(this)[0].id);
+    const xx = laptop.find((x) => x.id == $(this)[0].id);
     if (myListProduct.includes(xx)) {
       totalPrice.push(xx.price);
       localStorage.setItem("totalPrice", totalPrice);
@@ -920,7 +932,7 @@ const hide = function () {
     display: "flex",
   });
 };
-redshoes(shoes);
+redlaptop(laptop);
 renderMobile(mobile);
 renderClothes(clothes);
 // allProduct(allProducts)
@@ -933,7 +945,7 @@ $("#mobile").on("click", function () {
   $(".master3").hide();
   $(".master4").hide();
 });
-$("#shoes").on("click", function () {
+$("#laptop").on("click", function () {
   $(".master").show();
   $(".master2").hide();
   $(".master3").hide();
@@ -947,4 +959,27 @@ $("#clothes").on("click", function () {
   $(".master4").hide();
   
 });
- 
+ $('#order').on('click',function(){
+  $("#checkOut").css({
+    display:'flex',
+    visibility: "visible",
+    transform: "translate(-50%,-50%) scale(1)",
+    top: "50%",
+  });
+ })
+ function closeOrder() {
+  $("#checkOut").css("visibility", "hidden");
+  $(".totalPrice").hide(1000);
+  $(".myCart").hide(1000);
+  $(".arrowBack").hide(1000);
+  $(".headerBasket").hide(1000);
+  $(".myProduct").hide(1000);
+  $("#section").css({
+    display: "grid",
+  });
+  $("#header").css({
+    display: "flex",
+  });
+   
+ }
+ $(".submit").on("click", closeOrder);
