@@ -381,9 +381,9 @@ $('#searchBtn').on('click',function(){
    return elem.title.toLowerCase().includes(inputValue);
   })
   $(".master4").html('')
-  $(".master").html('')
-  $(".master2").html('')
-  $(".master3").html('')
+  // $(".master").html('')
+  // $(".master2").html('')
+  // $(".master3").html('')
    
   $(".master2").hide(1000);
   $(".master").hide(1000);
@@ -479,6 +479,9 @@ function toggle() {
     $(".master3").css({
       "background-color": "rgb(75, 65, 65)",
     });
+    $(".master4").css({
+      "background-color": "rgb(75, 65, 65)",
+    });
     $("#searchBtn").css({
       "background-color": "goldenrod",
     });
@@ -533,6 +536,9 @@ function toggle() {
       "background-color": "white",
     });
     $(".master3").css({
+      "background-color": "white",
+    });
+    $(".master4").css({
       "background-color": "white",
     });
     $("#header").css({
