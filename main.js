@@ -162,7 +162,7 @@ const clothes = [
     description:
       "Crew socks are mid-length and come up to the middle of your calf. They are the most popular sock type because they can be worn with almost anything.",
     rate: "⭐⭐⭐",
-    price: 1.50,
+    price: 1.5,
     Quantity: 1,
   },
   {
@@ -186,7 +186,8 @@ const clothes = [
     Quantity: 1,
   },
 ];
-const allProducts=[
+
+const allProducts = [
   {
     id: 1,
     title: "I PHONE X",
@@ -248,7 +249,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 1,
+    id: 7,
     title: "Acer",
     imageSrc: "./images/ACER.png",
     description:
@@ -258,7 +259,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 2,
+    id: 8,
     title: "Apple",
     imageSrc: "./images/APPLE.png",
     description:
@@ -268,7 +269,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 3,
+    id: 9,
     title: "ASUS",
     imageSrc: "./images/asus.png",
     description:
@@ -278,7 +279,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 4,
+    id: 10,
     title: "Dell",
     imageSrc: "./images/dell.png",
     description:
@@ -288,7 +289,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 5,
+    id: 11,
     title: "HP",
     imageSrc: "./images/hp.png",
     description:
@@ -298,7 +299,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 6,
+    id: 12,
     title: "Lenovo",
     imageSrc: "./images/lenovo.png",
     description:
@@ -308,7 +309,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 1,
+    id: 13,
     title: "T-Shirt",
     imageSrc: "./images/t1.png",
     description:
@@ -318,7 +319,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 2,
+    id: 14,
     title: "Jeans",
     imageSrc: "./images/t2.png",
     description:
@@ -328,7 +329,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 3,
+    id: 15,
     title: "Necktie",
     imageSrc: "./images/j3.png",
     description:
@@ -338,17 +339,17 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 4,
+    id: 16,
     title: "Socks",
     imageSrc: "./images/socks.png",
     description:
       "Crew socks are mid-length and come up to the middle of your calf. They are the most popular sock type because they can be worn with almost anything.",
     rate: "⭐⭐⭐",
-    price: 1.50,
+    price: 1.5,
     Quantity: 1,
   },
   {
-    id: 5,
+    id: 17,
     title: "Nike",
     imageSrc: "./images/cv.png",
     description:
@@ -358,7 +359,7 @@ const allProducts=[
     Quantity: 1,
   },
   {
-    id: 6,
+    id: 18,
     title: "Coat",
     imageSrc: "./images/coat.png",
     description:
@@ -369,34 +370,40 @@ const allProducts=[
   },
 ];
 const body = $("body");
-
+let users = [
+  { name: "raed", password: "123456" },
+  { name: "ahmad", password: "1234567" },
+];
+localStorage.setItem("users", JSON.stringify(users));
+//  console.log(JSON.parse(localStorage.getItem('users')));
+console.log(users);
 const btnMode = $("#mode");
 
 $("#Basket").html(`My Basket (${localStorage.getItem("totalQuantity") || 0})`);
 
-
-$('#searchBtn').on('click',function(){
-  let inputValue = $('#inputSearch').val().toLowerCase();
-   let objectResult = allProducts.filter((elem)=>{
-   return elem.title.toLowerCase().includes(inputValue);
-  })
-  if (inputValue==="") {
+$("#searchBtn").on("click", function () {
+  let inputValue = $("#inputSearch").val().toLowerCase();
+  let objectResult = allProducts.filter((elem) => {
+    return elem.title.toLowerCase().includes(inputValue);
+  });
+  if (inputValue === "") {
     return;
-  }
-  else{
-    $(".master4").html('')
+  } else {
+    $(".master4").html("").hide(1000);
     // $(".master").html('')
     // $(".master2").html('')
     // $(".master3").html('')
-     
+
     $(".master2").hide(1000);
     $(".master").hide(1000);
     $(".master3").hide(1000);
     $(".master4").show(1000);
-    
+
     objectResult.forEach((elem, index) => {
       const item = $(` <div id="${index + 1}"  class="cardbutton">
-      <div id="${index + 1}" class="cardWhenSearch"  title="click for more details">
+      <div id="${
+        index + 1
+      }" class="cardWhenSearch"  title="click for more details">
         <img id="image" src="${elem.imageSrc}" />
         <div>
           <p class="p">${elem.title}</p>
@@ -431,7 +438,7 @@ $('#searchBtn').on('click',function(){
       });
     });
     // !! -----------for addToCard laptop-----------
-    $(".addToCard").on("click", function () {
+    $(".addToCart").on("click", function () {
       const xx = objectResult.find((x) => x.id == $(this)[0].id);
       if (myListProduct.includes(xx)) {
         totalPrice.push(xx.price);
@@ -440,7 +447,7 @@ $('#searchBtn').on('click',function(){
         localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
       } else {
         myListProduct.push(xx);
-  
+        console.log(xx.price);
         totalPrice.push(xx.price);
         localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
         localStorage.setItem("totalPrice", totalPrice);
@@ -460,19 +467,19 @@ $('#searchBtn').on('click',function(){
         display: "block",
       });
       $("#Basket").html(` My Basket  (${totalQuantity}) `);
-     });
-   
+    });
+
     $(".OK").on("click", close);
   }
-  
-})
-   
- 
+});
+
 function toggle() {
   if (btnMode.val() === "DarkMode") {
     btnMode.val("LightMode");
     //  ! -----------DARK------------
-
+    $("body").css({
+      color: "rgb(75, 65, 65)",
+    });
     $(".totalPrice").css({
       color: "white",
     });
@@ -511,7 +518,6 @@ function toggle() {
     });
     $(".myCart").css({
       "background-color": " rgb(75, 65, 65)",
-       
     });
     $(".pft").css({
       "background-color": " #c2d9ff",
@@ -525,7 +531,6 @@ function toggle() {
     btnMode.css({
       "background-color": " goldenrod",
     });
-    
   } else if (btnMode.val() === "LightMode") {
     btnMode.val("DarkMode");
     // body.css({
@@ -565,7 +570,7 @@ function toggle() {
     $(".arrowBack").css({
       "background-color": " transparent",
     });
-    
+
     $(".pft").css({
       "background-color": " #c2d9ff",
     });
@@ -640,7 +645,11 @@ const redlaptop = () => {
     });
   });
   // !! -----------for addToCard laptop-----------
+
   $(".addToCard").on("click", function () {
+    // get key loginedInUser
+    // if exist => cont
+    // else show popup
     const xx = laptop.find((x) => x.id == $(this)[0].id);
     if (myListProduct.includes(xx)) {
       totalPrice.push(xx.price);
@@ -669,8 +678,8 @@ const redlaptop = () => {
       display: "block",
     });
     $("#Basket").html(` My Basket  (${totalQuantity}) `);
-   });
- 
+  });
+
   $(".OK").on("click", close);
 };
 // !============== render mobile ==============
@@ -740,9 +749,9 @@ const renderMobile = () => {
     $(".arrowBack").css({
       display: "block",
     });
- 
+
     $("#Basket").html(`My Basket (${totalQuantity})`);
-  }); 
+  });
 
   $(".OK").on("click", close);
 };
@@ -817,7 +826,7 @@ const renderClothes = () => {
     // $("#Basket")[0].value = ` My Basket  (${totalQuantity}) `;
     $("#Basket").html(`My Basket (${totalQuantity})`);
   });
- 
+
   $(".OK").on("click", close);
 };
 // !---------------------
@@ -850,55 +859,54 @@ const basketScreen = () => {
     display: "none",
   });
   const basketList = JSON.parse(localStorage.getItem("myListProduct"));
-
+  // debugger
   basketList?.forEach((elem, index) => {
-    const final = $(`<div id= ${index + 1} class="myProduct">
-         
-  <div class="imgTrash"><img class="imgbask" src=${JSON.stringify(
-    elem.imageSrc
-  )}/> <button class="bt" " ><i class="fa-solid fa-trash-can"></i></button></div>
-  <div class="pft">
-    <p>${elem.price}</p>
-    <p>${elem.Quantity} </p>
-    <p>${elem.price * elem.Quantity}</p>
-    
-  </div>
- 
+    const final = $(`
+    <div id= ${index + 1} class="myProduct">
+     
+      <div class="pft">
+        <p>${elem.price}</p>
+        <p>${elem.Quantity} </p>
+        <p>${elem.price * elem.Quantity}</p>
+      </div>
+    </div>
+`);
+    const myTrash = $(` <div class="imgTrash" id = imgTrash_${index + 1}>
+<img class="imgbask" src=${JSON.stringify(elem.imageSrc)}/>
 </div>`);
+    const deleteBtn = $(
+      `<button class="bt"><i class="fa-solid fa-trash-can"></i></button> `
+    );
+    deleteBtn.on("click", function () {
+      const productIdToRemove = elem.id;
 
-    $(".bt").on("click", function () {
-      const productIdToRemove = $(this).closest(".myProduct").attr("id");
-console.log($(this).closest(".myProduct")[0]);
-       const indexToRemove = myListProduct.findIndex(
-        (product) => product.id.toString() === productIdToRemove
+      const indexToRemove = basketList.findIndex(
+        (product) => product.id === productIdToRemove
       );
-        
+
       if (indexToRemove !== -1) {
-         myListProduct.splice(indexToRemove, 1);
+        basketList.splice(indexToRemove, 1);
         totalPrice.splice(indexToRemove, 1);
 
-         localStorage.setItem("myListProduct", JSON.stringify(myListProduct));
+        localStorage.setItem("myListProduct", JSON.stringify(basketList));
         localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
 
-         $(this).closest(".myProduct").remove();
+        $(this).closest(".myProduct").remove();
 
-         if (myListProduct.length === 0) {
-           localStorage.clear();
+        if (basketList.length === 0) {
+          localStorage.clear();
+          $(".totalPrice").text("Total Price" + " " + 0);
         } else {
-           const finalPrice = JSON.parse(
-            localStorage.getItem("myListProduct")
-          )?.map((ele) => ele.price * ele.Quantity);
+          const finalPrice = basketList.map((ele) => ele.price * ele.Quantity);
 
           const sumWithInitial = finalPrice?.reduce(
             (accumulator, currentValue) => accumulator + currentValue,
             0
           );
 
-           $(".totalPrice").text("Total Price" + " " + sumWithInitial);
+          $(".totalPrice").text("Total Price" + " " + sumWithInitial);
 
-           const finalQuantity = JSON.parse(
-            localStorage.getItem("myListProduct")
-          )?.map((ele) => ele.Quantity);
+          const finalQuantity = basketList.map((ele) => ele.Quantity);
           const totalQuantity = finalQuantity?.reduce(
             (accumulator, currentValue) => accumulator + currentValue,
             0
@@ -908,6 +916,10 @@ console.log($(this).closest(".myProduct")[0]);
         }
       }
     });
+     final.prepend(myTrash);
+     myTrash.append(deleteBtn)
+    // $(`.imgTrash`).append(deleteBtn);
+    // final.append(deleteBtn)
     $(".myCart").append(final);
   });
   for (let index = 0; index < totalPrice.length; index++) {
@@ -950,24 +962,22 @@ $("#laptop").on("click", function () {
   $(".master2").hide();
   $(".master3").hide();
   $(".master4").hide();
-  
 });
 $("#clothes").on("click", function () {
   $(".master3").show();
   $(".master").hide();
   $(".master2").hide();
   $(".master4").hide();
-  
 });
- $('#order').on('click',function(){
+$("#order").on("click", function () {
   $("#checkOut").css({
-    display:'flex',
+    display: "flex",
     visibility: "visible",
     transform: "translate(-50%,-50%) scale(1)",
     top: "50%",
   });
- })
- function closeOrder() {
+});
+function closeOrder() {
   $("#checkOut").css("visibility", "hidden");
   $(".totalPrice").hide(1000);
   $(".myCart").hide(1000);
@@ -980,6 +990,16 @@ $("#clothes").on("click", function () {
   $("#header").css({
     display: "flex",
   });
-   
- }
- $(".submit").on("click", closeOrder);
+}
+$(".submit").on("click", closeOrder);
+$(".Continue").on("click", function () {
+  let userNameInput = {
+    name: $(".UserName").val(),
+    password: $(".Password").val(),
+  };
+  localStorage.setItem("userNameInput", JSON.stringify(userNameInput));
+
+  users.push(JSON.parse(localStorage.getItem("userNameInput")));
+  localStorage.setItem("users", JSON.stringify(users));
+  users;
+});

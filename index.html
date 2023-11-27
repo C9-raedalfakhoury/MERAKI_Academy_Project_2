@@ -8,7 +8,10 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/036a0409a3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/036a0409a3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -21,9 +24,7 @@
       <div class="leftSide">
         <input type="button" id="mode" onclick="toggle()" value="DarkMode" />
       </div>
-      <div class="rightSide">
-        <input type="button" id="Login" value="Login" />
-        <input type="button" id="Register" value="Register" />
+      <div class="rightSide"> 
         <div class="shopping">
           <div class="baskesBin">
             <button id="btnBin">
@@ -47,22 +48,18 @@
     </header>
     <section id="section">
       <div class="logoSearch">
-        <img
-          id="logo"
-          src="./images/AL-FAKHOURY.png"
-        />
+        <img id="logo" src="./images/AL-FAKHOURY.png" />
         <div class="inputSearchDiv">
           <input id="inputSearch" type="text" placeholder="search.." />
           <button id="searchBtn">Search</button>
         </div>
       </div>
       <div class="link">
-        <button id="mobile" class="category" >Mobile</button>
+        <button id="mobile" class="category">Mobile</button>
         <div class="line"></div>
         <button id="laptop" class="category">Laptop</button>
         <div class="line"></div>
         <button id="clothes" class="category">clothes</button>
-       
       </div>
       <!-- !! master div -->
       <div class="master2"></div>
@@ -79,37 +76,52 @@
       <p class="detail">your details has been successful submitted. thanks!</p>
       <button type="button" class="OK">OK</button>
     </div>
+    <div class="signIn">
+      <h2>Sign In</h2>
+      <p class="uName">User Name</p>
+      <input type="text" placeholder="User Name" class="UserName" />
+      <!-- <p class="MobileandEmail">Mobile number or email</p> -->
+      <!-- <input type="text" class="MobileorEmail" /> -->
+      <p class="password">Password</p>
+      <input
+        type="password"
+        class="Password"
+        placeholder="At Least 6 Characters"
+      />
+      <input class="Continue" type="button" value="Continue" />
+    </div>
     <section class="myCart">
       <div class="arrowBack">
-       <button class="arrowBack" onclick="hide()"> <i class="fa-solid fa-arrow-left"></i></button>
+        <button class="arrowBack" onclick="hide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
       </div>
       <div class="headerBasket">
         <div>Product</div>
         <div class="data">
           <p class="p">Price</p>
           <p class="p">Quantity</p>
-          <p class="p"> Total</p>
-          
+          <p class="p">Total</p>
         </div>
       </div>
       <h1 class="totalPrice"></h1>
       <div class="order">
-        <input type="button" name="order" id="order" value="Check Out">
-        </div>
-      
+        <input type="button" name="order" id="order" value="Check Out" />
+      </div>
+
       <div id="checkOut">
         <div class="nameCustomer">
-          <input type="text" class="firstName" placeholder="First Name:">
-          <input type="text" class="lastName" placeholder="Last Name" >
+          <input type="text" class="firstName" placeholder="First Name:" />
+          <input type="text" class="lastName" placeholder="Last Name" />
         </div>
         <div class="email">
-          <input type="email" placeholder="Email:">
+          <input type="email" placeholder="Email:" />
         </div>
         <div class="number">
-          <input type="text" placeholder="Type Your Number Phone">
+          <input type="text" placeholder="Type Your Number Phone" />
         </div>
         <div class="postalCode">
-          <input type="number" placeholder="Postal Code">
+          <input type="number" placeholder="Postal Code" />
           <select name="Amman" id="place">
             <option value="Amman">Amman</option>
             <option value="Zarqa">Zarqa</option>
@@ -119,16 +131,20 @@
         </div>
         <p class="paymentMethod">Payment method:</p>
         <div class="radio">
-          <input type="radio" id="OnDelivery" name="method" value="OnDelivery">
-          <label for="">OnDelivery</label>
-          <input type="radio" id="paypal" name="method" value="Paypal">
+          <input
+            type="radio"
+            id="OnDelivery"
+            name="method"
+            value="OnDelivery"
+          />
+          <label for="">Credit or debit card</label>
+          <input type="radio" id="paypal" name="method" value="Paypal" />
           <label for="">paypal</label>
-          
         </div>
-        <input type="submit" class="submit" value="submit">
+        <input type="submit" class="submit" value="submit" />
       </div>
+      
     </section>
-   
     <script src="./main.js"></script>
   </body>
 </html>
