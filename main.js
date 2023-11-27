@@ -477,8 +477,24 @@ function toggle() {
   if (btnMode.val() === "DarkMode") {
     btnMode.val("LightMode");
     //  ! -----------DARK------------
+
     $("body").css({
       color: "rgb(75, 65, 65)",
+    });
+    $(".totalPrice").css({
+      color: "white",
+    });
+    $(".pro").css({
+      color: "white",
+    });
+    $("#pri").css({
+      color: "white",
+    });
+    $("#quan").css({
+      color: "white",
+    });
+    $("#priandquan").css({
+      color: "white",
     });
     $(".totalPrice").css({
       color: "white",
@@ -537,10 +553,22 @@ function toggle() {
     //   "background-color": " white",
     // });
     // !! --------------LIGHT------------
+    $("#pri").css({
+      color: "black",
+    });
+    $("#quan").css({
+      color: "black",
+    });
+    $("#priandquan").css({
+      color: "black",
+    });
     $(".totalPrice").css({
       color: "black",
     });
     $(".price").css({
+      color: "black",
+    });
+    $(".pro").css({
       color: "black",
     });
     $(".p").css({
@@ -865,9 +893,9 @@ const basketScreen = () => {
     <div id= ${index + 1} class="myProduct">
      
       <div class="pft">
-        <p>${elem.price}</p>
-        <p>${elem.Quantity} </p>
-        <p>${elem.price * elem.Quantity}</p>
+        <p id="pri">${elem.price}</p>
+        <p id="quan">${elem.Quantity} </p>
+        <p id="priandquan">${elem.price * elem.Quantity}</p>
       </div>
     </div>
 `);
